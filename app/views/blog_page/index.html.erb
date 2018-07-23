@@ -1,0 +1,11 @@
+<div class="container">
+  <% @articles.each do |article| %>
+    <h2><b><%= article.title %></b></h2><br>
+    <p>by <%= article.author %><br>
+    published on <%= article.created_at.strftime("%b %d, %Y") %></p><br>
+    <%= image_tag(article.image_url, class: "img-responsive") %><br>
+    <%= article.body %><br>
+    <br>
+    <%= link_to 'click to view', article %>
+  <% end %>
+</div>

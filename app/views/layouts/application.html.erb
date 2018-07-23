@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AgnesBlog</title>
+    <title>WebDev blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   </head>
 
+
   <body>
+    <nav class="navbar sticky-top navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#blogNav">
+              <span class="icon-bar glyphicon glyphicon-list"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <p id="brand-logo"><%= link_to "WebDev", root_path %></p>
+        </div> <!-- end header -->
+        <div class="collapse navbar-collapse navbar-right" id="blogNav">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "home", root_path %></li>
+            <li><%= link_to "about", blog_page_about_path %></li>
+            <li><%= link_to "contact", blog_page_contact_path %></li>
+          </ul>
+          </div>
+        </div> <!-- end container -->
+    </nav>
+
+    <%= image_tag("banner03.jpg", class:"img-responsive", id:"banner") %>
+
     <%= yield %>
+
+    <footer>
+      <p>&copy; WebDev 2018</p>
+    </footer>
+
   </body>
+
 </html>

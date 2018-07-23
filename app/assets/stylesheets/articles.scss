@@ -1,3 +1,33 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h3, p {
+  text-align: center;
+}
+
+p {
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  color: #022a40;
+  font-family: 'Orbitron', sans-serif;
+
+  &:visited {
+    color: #022a40;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: #92A6B1;
+    text-decoration: none;
+    padding: 5px;
+  }
+}
+
+.article-control {
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
